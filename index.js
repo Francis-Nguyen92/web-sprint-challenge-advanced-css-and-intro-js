@@ -1,3 +1,6 @@
+import { isParenthesizedExpression, isTSExpressionWithTypeArguments } from "@babel/types";
+import { lookupService } from "dns";
+
 export const artists = [
     {
       "id": 0,
@@ -295,11 +298,21 @@ Use addArtist to do the following:
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
-function addArtist(/*Your Code Here*/){
+function addArtist(arr){
     /*Your Code Here*/
+    const info = {
+      id: 20,
+      name: 'Francis Nguyen', 
+      years: '1992 - current day',
+      genre: 'Web Design', 
+      nationality: 'Vietnamese',
+      bio: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas animi, excepturi facilis ipsam tempora labore similique! Ducimus, sed? Reprehenderit, animi.'
+    }
+    arr.push(info);
+    return arr;
   }
 
-  
+  //  console.log(addArtist(artists));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use lotsOfArt to do the following: 
@@ -308,11 +321,29 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/){
+function lotsOfArt(arr){
   /*Your Code Here*/
+
+  // const newArr = [];
+  // for(let i = 0; i <= arr.length; i++){    
+  //   var paint = arr[i].paintings;   
+  //   if(paint > 100){
+  //     newArr.push(arr[i].name)
+  //   }
+  // }
+  // return newArr;
+  const newArr = [];
+  for(let i = 0; i < arr.length; i++){
+    var paint = arr[i].paintings;
+  
+    if(paint > 100){
+      newArr.push(arr[i].name);
+    }
+  }
+  return newArr;
 }
 
-
+console.log(lotsOfArt(artists));
 
 
 // 🎨🎨 STRETCH 🎨🎨//
