@@ -275,12 +275,13 @@ console.log(get20s(artists));
 
 function removeArtist(arr, num){
    /*Your Code Here*/
-   delete arr[num];
-   arr.shift();
+  //  delete arr[num];
+  //  arr.shift();
+  arr.splice(num, 1);
    return arr.length;
 }
 
-console.log(removeArtist(artists, 0));
+//  console.log(removeArtist(artists, 0));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use addArtist to do the following: 
@@ -324,14 +325,6 @@ For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte
 function lotsOfArt(arr){
   /*Your Code Here*/
 
-  // const newArr = [];
-  // for(let i = 0; i <= arr.length; i++){    
-  //   var paint = arr[i].paintings;   
-  //   if(paint > 100){
-  //     newArr.push(arr[i].name)
-  //   }
-  // }
-  // return newArr;
   const newArr = [];
   for(let i = 0; i < arr.length; i++){
     var paint = arr[i].paintings;
@@ -342,7 +335,7 @@ function lotsOfArt(arr){
   }
   return newArr;
 }
-
+// console.log(artists);
 console.log(lotsOfArt(artists));
 
 
