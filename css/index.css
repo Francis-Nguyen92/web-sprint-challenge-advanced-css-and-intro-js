@@ -27,6 +27,7 @@ body{
     font-size:1.6rem;
     line-height: 1.5;
     font-family: 'Raleway', sans-serif;	
+    
 }
 h1, p, .name, .bio {	
     font-family: 'Raleway', sans-serif;	
@@ -126,11 +127,64 @@ button:hover{
     width:80%;
     margin:0 auto;
 }
-
 .artist{
     width:40%;
     text-align:center;
 }
 .artist img{
     width:100%;
+}
+/* Media Query */
+@media(max-width:500px){
+    body{
+        width:100%;
+    }
+header nav a{
+    font-size: 1.5rem;
+    padding: 0 5%;
+}
+.title-container div{
+  height:40vh;
+  width:100%;
+  background-size:cover;
+  background-repeat: no-repeat;
+  margin:2% 0;
+  margin-top:5%;
+}
+h1{
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+button{
+    font-size: 1.3rem;
+    padding:1% 4%;
+    
+}
+.title-container hr{
+    width:100%;
+}
+.artists-container{
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width:100%;
+    
+ }
+.artist{
+    width: 60%;
+    margin: 2% auto;
+}
+.artist img{
+    width:70%;
+    height: 18vh;
+}
+.artist a{
+    font-size: 1.8rem;
+}
+.bio{
+    margin:0;
+    font-size: 1rem;
+    padding: 1% 0;
+}
+
 }
